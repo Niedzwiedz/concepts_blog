@@ -31,5 +31,17 @@ module ConceptsBlog
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
+
+    config.autoload_paths << Rails.root.join("lib")
+
+
+    config.middleware.delete Rack::MethodOverride
+    config.middleware.delete ActionDispatch::RequestId
+    config.middleware.delete ActionDispatch::Cookies
+    config.middleware.delete ActionDispatch::Session::CookieStore
+    config.middleware.delete ActionDispatch::Flash
+    config.middleware.delete Rack::Head
+    config.middleware.delete Rack::ETag
+    config.middleware.delete Rack::ConditionalGet
   end
 end
