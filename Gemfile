@@ -16,6 +16,11 @@ gem "dry-container", "0.6.0"
 # Validation
 gem "dry-schema", "0.1.0"
 
+# xlsx
+gem 'rubyzip', '= 1.0.0'
+gem 'axlsx', '= 2.0.1'
+gem 'axlsx_rails'
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production

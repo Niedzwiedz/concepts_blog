@@ -3,7 +3,17 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resource :post, only: [:show, :create]
+      resources :posts, only: [:index, :show, :create] do
+        member do
+          get :download
+        end
+
+        resources :comments, except: [:update, :destroy]
+      end
+
+      resources :comments, except: [:update, :destroy] do
+        resources :comments, except: [:update, :destroy]
+      end
     end
   end
 end

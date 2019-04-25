@@ -1,0 +1,15 @@
+
+wb = xlsx_package.workbook
+
+wb.add_worksheet(name: "Post") do |sheet|
+  sheet.add_row %w(author title content)
+  sheet.add_row [@post.author, @post.title, @post.content]
+end
+
+wb.add_worksheet(name: "Comments") do |sheet|
+  sheet.add_row %w(content)
+
+  @comments.each do |comment|
+    sheet.add_row [comment.content]
+  end
+end

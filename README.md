@@ -1,24 +1,21 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Dependencies
 
-Things you may want to cover:
+`ruby '2.6.1'`
 
-* Ruby version
+## Setup
 
-* System dependencies
+`docker-compose up -d`
 
-* Configuration
+`bin/setup`
 
-* Database creation
+## Description
+Blog platform using slightly different architecture idea.
+It is possigle to add comments to posts
+It is possible to add comments to comments to comments ...
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+TODO:
+[] Add ErrorHandling
+[] Write more specs
+[] Fix xlsx generation

@@ -16,5 +16,12 @@ module Post
     def one_for_id(id)
       adapter.find(id)
     end
+
+    def create_comment(id:, params:)
+      adapter
+        .find(id)
+        .comments
+        .create(params)
+    end
   end
 end
